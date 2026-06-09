@@ -1,4 +1,4 @@
-import { ChevronRightIcon, DeleteIcon } from "lucide-react";
+import { CheckIcon, ChevronRightIcon, DeleteIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
@@ -17,7 +17,8 @@ function Tasks(props) {
 
         <li key={task.id} className="flex gap-2">
           <button onClick={() => props.onTaskClick(task.id)}
-            className={`bg-slate-400 p-2 text-left w-full rounded-md text-white ${task.isCompleted ? 'line-through text-black' : ''}`}>
+            className={`bg-slate-400 p-2 text-left w-full flex items-center gap-2 rounded-md text-white ${task.isCompleted ? 'line-through text-black' : ''}`}>
+              {task.isCompleted && <CheckIcon />}
             {task.title}
           </button>
 
