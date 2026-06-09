@@ -43,7 +43,7 @@ localStorage.setItem("tasks", JSON.stringify(tasks));
   }
 
   return (
-    <div className='w-screen h-screen bg-slate-500 flex justify-center p-6'>
+    <div className='w-screen min-h-screen bg-slate-500 flex flex-col justify-between items-center p-6'>
       <div className='w-[500px] space-y-4'>
         <h1 className='text-3xl text-slate-100 font-bold text-center'>
           Gerenciador de Tarefas</h1>
@@ -52,6 +52,9 @@ localStorage.setItem("tasks", JSON.stringify(tasks));
           onTaskClick={onTaskClick}
           onDeliteTaskClick={onDeliteTaskClick} />
       </div>
+      <footer className='text-center text-slate-200 text-sm'>
+        By Gabriel Leão
+      </footer>
     </div>
   );
 }
